@@ -45,6 +45,10 @@ body {
   color: hsl(292, 42%, 14%);
   width: 24ch;
   font-size: 16px;
+  cursor: pointer;
+}
+.faq__items__item__question__icon {
+  cursor: pointer;
 }
 .faq__items__item__answer__description {
   line-height: 1.4;

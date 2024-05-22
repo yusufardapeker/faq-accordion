@@ -55,6 +55,11 @@ body {
 					color: $dark-purple;
 					width: 24ch;
 					font-size: 16px;
+					cursor: pointer;
+				}
+
+				&__icon {
+					cursor: pointer;
 				}
 			}
 
