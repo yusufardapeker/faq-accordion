@@ -2,6 +2,8 @@
 
 This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz).
 
+[The Website](https://faq-accordion5039.netlify.app/)
+
 ### Built with
 
 - SASS
