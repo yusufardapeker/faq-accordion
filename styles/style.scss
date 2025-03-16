@@ -60,21 +60,20 @@ body {
 			}
 
 			&__answer {
+				display: grid;
+				grid-template-rows: 0fr;
+				transition: grid-template-rows 300ms ease;
+
 				&__description {
 					line-height: 1.4;
 					color: $grayish-purple;
 					font-weight: 500;
-					opacity: 0;
-					font-size: 0;
-					transition: opacity 300ms, font-size 100ms;
+					overflow: hidden;
 				}
 			}
 
 			&.show .faq__items__item__answer {
-				&__description {
-					opacity: 1;
-					font-size: unset;
-				}
+				grid-template-rows: 1fr;
 			}
 		}
 	}
@@ -107,11 +106,8 @@ body {
 					}
 				}
 
-				&.show .faq__items__item__answer {
-					&__description {
-						opacity: 1;
-						font-size: 20px;
-					}
+				&__answer {
+					font-size: 20px;
 				}
 			}
 		}

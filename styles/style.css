@@ -47,17 +47,19 @@ body {
   width: 24ch;
   font-size: 16px;
 }
+.faq__items__item__answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
 .faq__items__item__answer__description {
   line-height: 1.4;
   color: hsl(292, 16%, 49%);
   font-weight: 500;
-  opacity: 0;
-  font-size: 0;
-  transition: opacity 300ms, font-size 100ms;
+  overflow: hidden;
 }
-.faq__items__item.show .faq__items__item__answer__description {
-  opacity: 1;
-  font-size: unset;
+.faq__items__item.show .faq__items__item__answer {
+  grid-template-rows: 1fr;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -77,8 +79,7 @@ body {
   .faq__items__item__question__icon {
     width: 40px;
   }
-  .faq__items__item.show .faq__items__item__answer__description {
-    opacity: 1;
+  .faq__items__item__answer {
     font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
