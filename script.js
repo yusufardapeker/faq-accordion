@@ -1,12 +1,13 @@
-const faqItemElements = document.querySelectorAll(".faq__items__item");
+const questionElements = document.querySelectorAll(".faq__items__item__question");
 
-faqItemElements.forEach((faqElement) => {
-	faqElement.addEventListener("click", () => {
-		const arrowIcon = faqElement.childNodes[1].childNodes[3];
+questionElements.forEach((faqElement) => {
+	faqElement.addEventListener("click", ({ target }) => {
+		const itemElement = target.closest(".faq__items__item");
+		const arrowIcon = itemElement.childNodes[1].childNodes[3];
 
-		faqElement.classList.toggle("show");
+		itemElement.classList.toggle("show");
 
-		faqElement.classList.value.includes("show")
+		itemElement.classList.value.includes("show")
 			? (arrowIcon.src = "./assets/images/icon-minus.svg")
 			: (arrowIcon.src = "./assets/images/icon-plus.svg");
 	});
